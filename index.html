@@ -1,10 +1,62 @@
-<html>
-  <head>
-    <title>
-      Portfolio of Bibek
-    </title>
-  </head>
-  <body>
-    <marquee style="font-family:lemon_milk" direction="Right" scrollamount="1" width="60%" bgcolor="Cyan"height="70px"> <h1> HELLO AND WELCOME</h1></marquee>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursor with Trailing and Blend</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="hover-target"style="text-align:center"style="font-size:70px">BIBEK SHARMA</h1>
+  <p>This is a sample paragraph.</p>
+  <p class="hover-target"></p>
+  <div class="parallax-section">
+    <div class="parallax-content">
+      <h1 class="glow">Working Here.</h1>
+      <p>Comming Soon.</p>
+    </div>
+  </div>
+  
+  <div class="normal-section">
+    <h2>Normal Scroll Section</h2>
+    <p>This section scrolls normally.</p>
+  </div>
+  
+  <div class="custom-cursor"></div>
+
+  <script>
+    const cursor = document.querySelector('.custom-cursor');
+
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+    const delay = 0.1;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animate() {
+      currentX += (mouseX - currentX) * delay;
+      currentY += (mouseY - currentY) * delay;
+      cursor.style.left = `${currentX}px`;
+      cursor.style.top = `${currentY}px`;
+      requestAnimationFrame(animate);
+    }
+    
+
+    animate();
+
+    // Grow on hover
+    const targets = document.querySelectorAll('.hover-target');
+    targets.forEach(target => {
+      target.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursor-grow');
+      });
+      target.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursor-grow');
+      });
+    });
+  </script>
+</body>
 </html>
