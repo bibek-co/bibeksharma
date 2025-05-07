@@ -21,7 +21,7 @@ header{
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 50px;
+  padding: 15px 50px;
   text-align: right;
   display: flex;
   justify-content: space-between;
@@ -38,6 +38,7 @@ header{
   gap: 40px;
   text-align: end ;
   z-index: 1001;
+  text-shadow: black 0 0 2px;
 }
 
 .navi li {
