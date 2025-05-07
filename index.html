@@ -1,35 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bibek Sharma</title>
+  <title>Test</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 class="hover-target"style="text-align:center"style="font-size:70px">BIBEK SHARMA</h1>
-  <p>This is a sample paragraph.</p>
-  <p class="hover-target"></p>
-  <div class="parallax-section">
-    <div class="parallax-content">
-      <h1 class="hover-target">Working Here.</h1>
-      <p>Comming Soon.</p>
-    </div>
-  </div>
-  
-  <div class="normal-section">
-    <h2>Normal Scroll Section</h2>
-    <p>This section scrolls normally.</p>
-  </div>
+  <header>
+
+   <h1  class="hover-target logo">BIBEK SHARMA</h1>
+   <ul class="navi">
+      <li><h3 class="hover-target"><a href= # class="active">Home</a></h3></li>
+      <li><h3 class="hover-target"><a href= #>Profile</a></h3></li>
+      <li><h3 class="hover-target"><a href= #>Projects</a></h3></li>
+      <li><h3 class="hover-target"><a href= #>Contact</a></h3></li>
+   </ul>
+   <img class="image" src="imgs/output-onlinepngtools.png" width="50" height="60">
+   <img class="image1" src="imgs/output-onlinepngtools1.png" width="50" height="60">
+   <img class="image2" src="imgs/output-onlinepngtools2.png" width="50" height="60">
+   <img class="image3" src="imgs/spalsh.png" width="220" height="200">
+  </header>
   
   <div class="custom-cursor"></div>
 
   <script>
     const cursor = document.querySelector('.custom-cursor');
 
-    let mouseX = 0, mouseY = 0;
+    let mouseX = 700, mouseY = -50;
     let currentX = 0, currentY = 0;
-    const delay = 0.1;
+    const delay = 0.135;
 
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
@@ -58,5 +59,6 @@
       });
     });
   </script>
+  <p class="para">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptates, possimus unde id deserunt magnam quo excepturi adipisci minus sequi?"</p>
 </body>
 </html>
