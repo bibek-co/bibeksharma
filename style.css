@@ -5,19 +5,27 @@
   padding: 0px;
   box-sizing: border-box;
 }
+.welcome{
+  display: flex;
+  position: absolute;
+  font-family: Georgia ;
+  text-decoration: double;
+  font-weight: 700;
+  top: 300px;
+}
 
 .logo{
   font-family: Georgia ;
   text-decoration: double;
   text-align: left;
   font-weight: 700;
-  color: #000;
+  color: white;
   text-shadow: whitesmoke 0 0 5px;
 }
 
 header{
   position: absolute;
-  background-color: #fdf5df ;
+  background-color: #09122C ;
   top: 0;
   left: 0;
   width: 100%;
@@ -27,7 +35,7 @@ header{
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow:black 0 0 25px;
+  box-shadow:black 0 0 55px;
   cursor: none;
   overflow: hidden;
 }
@@ -37,7 +45,7 @@ header{
   display: flex;
   gap: 40px;
   text-align: end ;
-  z-index: 1001;
+  z-index: 100;
   text-shadow: black 0 0 2px;
 }
 
@@ -67,31 +75,7 @@ header{
 .navi li a.active
 {
   color: #ffffff;
-  background: #f92c85;
-}
-
-.image{
-  position: absolute;
-  left:500px ;
-  top: 60px;
-  rotate: 36deg;
-  z-index: 100;
-}
-.image1{
-  position: absolute;
-  left:873px ;
-  top: 20px;
-  rotate: -46deg;
-  z-index: 100;
-}
-
-.image2{
-  position: absolute;
-  left:287px ;
-  top: 60px;
-  rotate: -90deg;
-  background-size: cover;
-  z-index: 100;
+  background: #BE3144;
 }
 
 .image3{
@@ -101,7 +85,6 @@ header{
   position:inherit;
   padding: 0px;
   max-width: 100%;
-  z-index: 100;
 }
 
 
@@ -135,6 +118,39 @@ body {
   width: 50px;
   height: 50px;
   box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.6);
+}
+
+section{
+user-select: none;
+position: absolute;
+width: 100%;
+height: 750px;
+padding-top: 120px;
+display: flex;
+background-image: linear-gradient(rgb(9, 0, 140) 40%,rgb(4, 0, 27));
+color: white;
+
+}
+
+.man{
+  top: 300px;
+  left: 200px;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  animation: floatUpDown 3s ease-in-out infinite;
+  transform: scaleX(-1);
+}
+
+@keyframes floatUpDown {
+  0%   { transform: translateY(0) scaleX(-1);}
+  50%  { transform: translateY(-15px) scaleX(-1);}
+  100% { transform: translateY(0) scaleX(-1); }
+}
+
+.fg{
+  user-select: none;
+  z-index: 10;
 }
 
 .para{
